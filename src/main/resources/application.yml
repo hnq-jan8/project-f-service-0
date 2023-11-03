@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: project_f-backend
+  datasource:
+    username: root
+    password: Db@0801a
+    url: jdbc:mysql://localhost:33066/project_f
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 8081
+  servlet:
+    context-path: /fapp
+project_f:
+  jwt:
+    secret: project_f
+    expiration: 86400
+    token-prefix: Bearer
+    header-string: Authorization
+  security:
+    public-urls: /auth/register, /auth/login,
